@@ -2,7 +2,7 @@ from django import forms
 from .models import Recipe, Category
 
 
-class RecipeForm(forms.Form):
+class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
         fields = ['name', 'description', 'steps', 'cooking_time', 'image', 'author']
