@@ -86,7 +86,7 @@ def register_view(request):
             password = form.cleaned_data['password']
             user = User.objects.create_user(username=username, email=email, password=password)
             user.save()
-            messages.success(request, 'Полтзователь успешно создан!!')
+            messages.success(request, 'Пользователь успешно создан!!')
             return redirect('home')
     else:
         form = RegisterForm()
