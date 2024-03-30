@@ -3,12 +3,8 @@ from .models import Recipe, Category
 
 
 class RecipeForm(forms.Form):
-    name = forms.CharField(max_length=42, widget=forms.TextInput())
-    description = forms.CharField(widget=forms.TextInput())
-    steps = forms.CharField(widget=forms.TextInput())
-    cooking_time = forms.IntegerField(widget=forms.TextInput())
-    image = forms.ImageField()
-    author = forms.CharField(widget=forms.TextInput())
+    class Meta:
+        model = Recipe
 
 class CategoryForm(forms.ModelForm):
     class Meta:
