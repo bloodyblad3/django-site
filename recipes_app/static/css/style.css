@@ -189,8 +189,9 @@ input[type="text"],
 input[type="password"], 
 input[type="email"],
 input[type="number"],
-#id_author,
-#id_steps {
+#id_description,
+#id_steps,
+#id_author {
     width: 100%;
     padding: 5px;
     margin: 5px 0;
