@@ -1,0 +1,12 @@
+{% extends "recipes_app/index.html" %}
+
+{% block title %}Login - My Recipe App{% endblock %}
+
+{% block content %}
+<form class="form" method="post">
+    <h2 class="text">Login</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="submit-button" type="submit">Login</button>
+</form>
+{% endblock %}

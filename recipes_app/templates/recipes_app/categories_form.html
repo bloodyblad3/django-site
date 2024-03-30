@@ -1,0 +1,10 @@
+{% extends "recipes_app/index.html" %}
+
+{% block content %}
+    <h2 class="text">{{ form_name }}</h2>
+    <form class="form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="submit-button" type="submit">Submit</button>
+    </form>
+{% endblock %}

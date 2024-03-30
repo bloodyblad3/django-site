@@ -1,0 +1,18 @@
+{% extends "recipes_app/index.html" %}
+
+{% block content %}
+<h1 class="recipe-title">Card of recipe {{ recipe.id }}</h1>
+<section class="recipe-card2 base_container">
+    <div class="recipe_info">
+        <h2 class="recipe_card-title">{{ recipe.name }}</h2>
+        <p class="recipe_card-desc">{{ recipe.description }}</p>
+        <p class="recipe_card-time">Cooking Time: {{ recipe.cooking_time }}</p>
+        <p class="recipe_card-steps">Steps: {{ recipe.steps }}</p>
+        {% for category in categories %}
+        <p class="recipe_card-categories">Categories: {{ category.category }}</p>
+        {% endfor %}
+        <p class="recipe_card-author">Author: {{ recipe.author }}</p>
+    </div>
+    <img class="recipe_info-img" src="{{ recipe.image.url }}" alt="{{ recipe.name }}">
+</section>
+{% endblock %}

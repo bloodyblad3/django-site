@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.base_container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.success {
+    position: absolute;
+    max-width: 260px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(0, 255, 0, .5);
+    margin: 15px 50px;
+    transition: all .35s;
+}
+
+.error {
+    position: absolute;
+    max-width: 260px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, .5);
+    margin: 15px 50px;
+    transition: all .35s;
+}
+
+.recipes {
+    margin-bottom: 50px;
+}
+
+.recipes-title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.recipes_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.recipe-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.recipe-card {
+    background-color: #0f0f0f0f;
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.recipe-card2 {
+    background-color: #0f0f0f0f;
+    display: flex;
+    padding: 10px;
+    gap: 50px;
+}
+
+.recipe_info {
+    width: 522px;
+}
+
+.recipe_card-title {
+    font-size: 33px;
+    margin-bottom: 5px;
+}
+
+.recipe_card-desc {
+    font-style: italic;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.recipe_card-time, .recipe_card-steps, .recipe_card-categories {
+    margin-bottom: 5px;
+}
+
+.recipe_card-author {
+    font-size: 20px;
+}
+
+.recipe_card-img {
+    width: 100%;
+    height: 100%;
+}
+
+.recipe_info-img {
+    width: 50%;
+}
+
+.text {
+    margin: 15px;
+    font-size: 38px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.recipe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.submit-button {
+    margin-top: 15px;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px 50px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+input[type="text"],
+input[type="password"], 
+input[type="email"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}

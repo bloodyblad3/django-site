@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}My Recipe App{% endblock %}</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header-title">My Recipe App</h1>
+        {% if current_user.is_authenticated %}
+        <h1 class="header-text">Welcome, {{ current_user.username }}</h1>
+        {% else %}
+        <h1 class="header-text">Hello, Guest!</h1>
+        {% endif %}
+    </header>
+
+    <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/create_recipe/">Add Recipe</a>
+        <a href="/accounts/login/">Login</a>
+        <a href="/accounts/register/">Register</a>
+        <a href="/accounts/logout/">Logout</a>
+    </nav>
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <div {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% block content %}
+    <section class="recipes base_container">
+        <h2 class="recipes-title">Featured Recipes</h2>
+        <ul class="recipes_cards">
+            {% for recipe in recipes %}
+            <li class="recipe-card">
+                <h3 class="recipe_card-title">{{ recipe.name }}</h3>
+                <img class="recipe_card-img" src="{{ recipe.image.url }}" alt="{{ recipe.name }}">
+                <p class="recipe_card-desc">{{ recipe.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endblock %}
+
+    <footer class="footer">
+        &copy; 2024 My Recipe App
+    </footer>
+</body>
+
+</html>
