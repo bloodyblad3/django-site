@@ -5,6 +5,7 @@ from .models import Recipe, Category
 class RecipeForm(forms.Form):
     class Meta:
         model = Recipe
+        fields = ['name', 'description', 'steps', 'cooking_time', 'image', 'author']
 
 class CategoryForm(forms.ModelForm):
     class Meta:
